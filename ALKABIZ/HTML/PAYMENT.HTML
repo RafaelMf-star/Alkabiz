@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Pago | ALKABIZ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/STYLE.CSS" />
+  <script type="module" src="/JAVA.JS"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="/HTML/INDEX.HTML" class="home-button">Inicio</a>
+      <div class="logo">
+        <img src="/IMG/LOGO.jpg" alt="Logo ALKABIZ" />
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="payment-container">
+      <h1>Opciones de Pago</h1>
+      <div class="payment-options">
+        <button class="payment-button" id="paypal-btn" aria-label="Pagar con PayPal">PayPal</button>
+        <button class="payment-button" id="mastercard-btn" aria-label="Pagar con MasterCard">MasterCard</button>
+        <button class="payment-button" id="bitcoin-btn" aria-label="Pagar con Bitcoin">Bitcoin</button>
+        <button class="payment-button" id="ethereum-btn" aria-label="Pagar con Ethereum">Ethereum</button>
+      </div>
+
+      <div id="payment-details" class="hidden">
+        <!-- Aquí se cargarán los detalles dinámicos según el método de pago -->
+      </div>
+
+      <button class="buy-button" id="confirm-purchase-btn">Confirmar Compra</button>
+    </section>
+
+    <div id="confirmation-modal" class="hidden">
+      <div class="modal-content">
+        <h2>Confirmar Compra</h2>
+        <div id="cart-summary">
+          <!-- Resumen de productos seleccionados -->
+        </div>
+        <button class="buy-button" id="finalize-purchase-btn">Aceptar Compra</button>
+        <button class="close-modal" id="cancel-purchase-btn">Cancelar</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Contacto: alkabiz@gmail.com | Teléfono: 12369890</p>
+    <p>Síguenos: 
+      <a href="#">Instagram</a> | 
+      <a href="#">X</a> | 
+      <a href="#">Facebook</a>
+    </p>
+  </footer>
+
+  <script>
+    // Lógica para mostrar los detalles del pago según el método seleccionado
+    const paymentDetails = document.getElementById('payment-details');
+    const paymentButtons = document.querySelectorAll('.payment-button');
+    paymentButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const method = button.id.split('-btn')[0];
+        paymentDetails.innerHTML = `<p>Procesando pago con <strong>${method}</strong>. Complete los detalles para continuar.</p>`;
+        paymentDetails.classList.remove('hidden');
+
+        // Resaltar el botón seleccionado
+        paymentButtons.forEach(btn => btn.classList.remove('selected'));
+        button.classList.add('selected');
+      });
+    });
+
+    // Modal de confirmación
+    const confirmButton = document.getElementById('confirm-purchase-btn');
+    const modal = document.getElementById('confirmation-modal');
+    const finalizeButton = document.getElementById('finalize-purchase-btn');
+    const cancelButton = document.getElementById('cancel-purchase-btn');
+
+    confirmButton.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+      document.getElementById('cart-summary').innerHTML = '<p>Resumen de productos seleccionados...</p>';
+    });
+
+    cancelButton.addEventListener('click', () => modal.classList.add('hidden'));
+    finalizeButton.addEventListener('click', () => {
+      alert('Compra realizada con éxito.');
+      modal.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>

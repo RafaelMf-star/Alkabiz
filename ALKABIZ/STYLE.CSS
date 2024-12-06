@@ -1,0 +1,250 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7fc; /* Fondo suave */
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+header .logo img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #007bff;
+}
+
+/* Main Content */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  padding: 2rem 1rem;
+}
+
+section.form-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #555;
+}
+
+.form-group input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+input:focus, textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-4px);
+}
+
+/* Products */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.product {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  z-index: none;
+}
+
+.product img:hover {
+  transform: scale(1.05);
+}
+
+.product .price {
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+/* Cart Page */
+.cart-container {
+  max-width: 850px;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+  justify-content: space-between;
+}
+
+.cart-item img {
+  width: 80px;
+  margin-right: 1rem;
+  border-radius: 8px;
+}
+
+.cart-item .cart-item-details {
+  flex: 1;
+}
+
+.cart-total {
+  text-align: right;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  padding: 0.5rem 0;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+.buy-button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Chat Button */
+#chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f1f1f1;
+  color: #007bff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#chat-button:hover {
+  background-color: #333;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .copyright {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .product {
+    width: 100%;
+  }
+
+  .product-popularity .product-chart .chart-bar div {
+    height: 100px;
+  }
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablas de Resultados</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    caption {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Tabla de recomendaciones -->
+  <table>
+    <caption>Recomendaciones por Usuario</caption>
+    <thead>
+      <tr>
+        <th>Usuario</th>
+        <th>Producto</th>
+        <th>Motivo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="3">Andrés</td>
+        <td>Camiseta gráfica de rock oversize</td>
+        <td>Basado en tu interés por la cultura rock y tu preferencia por prendas oversize.</td>
+      </tr>
+      <tr>
+        <td>Chaqueta de cuero reciclado</td>
+        <td>Cumple con tu interés por moda sostenible y estilo rebelde.</td>
+      </tr>
+      <tr>
+        <td>Gorra estilo urbano unisex</td>
+        <td>Diseño práctico y acorde a tu estilo de moda urbana.</td>
+      </tr>
+      <tr>
+        <td rowspan="3">Sofía</td>
+        <td>Vestido vintage de segunda mano</td>
+        <td>Alineado con tu interés por la moda vintage y la sostenibilidad.</td>
+      </tr>
+      <tr>
+        <td>Cartera artesanal hecha con materiales reciclados</td>
+        <td>Ideal para expresar tu individualidad y apoyar marcas sostenibles.</td>
+      </tr>
+      <tr>
+        <td>Camiseta con estampado feminista</td>
+        <td>Refleja tus valores de igualdad y autenticidad.</td>
+      </tr>
+      <tr>
+        <td rowspan="3">Carlos</td>
+        <td>Sudadera con diseño de videojuego retro</td>
+        <td>Relacionada con tu pasión por los videojuegos retro y el coleccionismo.</td>
+      </tr>
+      <tr>
+        <td>Figura de acción edición limitada</td>
+        <td>Perfecta para tu interés en productos exclusivos y coleccionables.</td>
+      </tr>
+      <tr>
+        <td>Zapatillas con diseño gamer</td>
+        <td>Diseño innovador acorde a tu estilo y cultura geek.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Tabla de compras -->
+  <table>
+    <caption>Historial de Compras</caption>
+    <thead>
+      <tr>
+        <th>Compra ID</th>
+        <th>Usuario</th>
+        <th>Productos</th>
+        <th>Total</th>
+        <th>Estado</th>
+        <th>Método de Pago</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>CMP001</td>
+        <td>Andrés</td>
+        <td>
+          Camiseta gráfica de rock oversize (1x $25.00)<br>
+          Chaqueta de cuero reciclado (1x $80.00)
+        </td>
+        <td>$105.00</td>
+        <td>Validada</td>
+        <td>Tarjeta de crédito</td>
+      </tr>
+      <tr>
+        <td>CMP002</td>
+        <td>Sofía</td>
+        <td>
+          Vestido vintage de segunda mano (1x $45.00)<br>
+          Cartera artesanal hecha con materiales reciclados (1x $35.00)
+        </td>
+        <td>$80.00</td>
+        <td>Validada</td>
+        <td>PayPal</td>
+      </tr>
+      <tr>
+        <td>CMP003</td>
+        <td>Carlos</td>
+        <td>
+          Sudadera con diseño de videojuego retro (1x $50.00)<br>
+          Figura de acción edición limitada (1x $120.00)
+        </td>
+        <td>$170.00</td>
+        <td>Validada</td>
+        <td>Criptomoneda</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Tabla de segmentos -->
+  <table>
+    <caption>Segmentación de Usuarios</caption>
+    <thead>
+      <tr>
+        <th>Segmento</th>
+        <th>Usuarios</th>
+        <th>Características</th>
+        <th>Canales Recomendados</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Moda rebelde y urbana</td>
+        <td>Andrés</td>
+        <td>
+          Estilo urbano y oversize<br>
+          Preferencia por marcas sostenibles y auténticas<br>
+          Productos personalizados
+        </td>
+        <td>Instagram, TikTok, Reddit</td>
+      </tr>
+      <tr>
+        <td>Moda vintage y sostenible</td>
+        <td>Sofía</td>
+        <td>
+          Interés en moda vintage y prendas de segunda mano<br>
+          Enfoque en sostenibilidad y feminismo<br>
+          Preferencia por accesorios únicos
+        </td>
+        <td>Pinterest, TikTok, Instagram</td>
+      </tr>
+      <tr>
+        <td>Cultura gamer y geek</td>
+        <td>Carlos</td>
+        <td>
+          Interés por videojuegos retro y cultura geek<br>
+          Preferencia por coleccionables y productos exclusivos<br>
+          Valoración de diseños innovadores
+        </td>
+        <td>YouTube, Reddit, Twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

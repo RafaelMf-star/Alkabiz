@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALKABIZ</title>
+  <link rel="stylesheet" href="/STYLE.CSS" />
+  <script type="module" src="/JAVA.JS"></script>
+  <style>
+    /* Estilos para dispositivos móviles */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .navbar .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .product-list {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .product {
+        width: 90%;
+        margin-bottom: 1rem;
+      }
+
+      footer .row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      footer .col-md-4 {
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      #chart-container {
+        width: 100%;
+        overflow-x: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar .menu a {
+        font-size: 0.9rem;
+      }
+
+      .product img {
+        height: auto;
+      }
+
+      button {
+        font-size: 14px;
+      }
+
+      footer .row p, footer ul li {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <a href="/HTML/CAR.HTML" class="cart-icon">🛒</a>
+      <div class="logo">
+        <img src="/IMG/LOGO.jpg" alt="ALKABIZ Logo" />
+      </div>
+      <div class="menu">
+        <a href="/HTML/REGISTER.HTML">Registrar</a>
+        <span>|</span>
+        <a href="/HTML/LOGIN.HTML">Login</a>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- MAIN CONTENT -->
+  <main>
+    <section id="home">
+      <h1>Bienvenido a ALKABIZ</h1>
+      <div class="product-list">
+        <!-- PRODUCT TEMPLATE -->
+        <div class="product" id="product1">
+          <img src="/IMG/MEDIAS AZULES.JPG" alt="Medias azules" class="product-img" />
+          <div class="product-info">
+            <h3>Medias Azules</h3>
+            <p>Descripción breve del producto.</p>
+            <div class="sizes">
+              <label>Tallas:</label>
+              <span>S</span><span>M</span><span>L</span><span>XL</span>
+            </div>
+            <p class="price">$10.00</p>
+            <button class="buy-now" onclick="goToPayment('Medias Azules', 10.00)">Comprar Ahora</button>
+            <button class="add-to-cart">Agregar al Carrito</button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="product" id="product2">
+          <img src="/IMG/Medias negra.jpg" alt="Medias negras" class="product-img" />
+          <div class="product-info">
+            <h3>Medias Negras</h3>
+            <p>Descripción breve del producto.</p>
+            <div class="sizes">
+              <label>Tallas:</label>
+              <span>S</span><span>M</span><span>L</span><span>XL</span>
+            </div>
+            <p class="price">$10.00</p>
+            <button class="buy-now" onclick="goToPayment('Medias Negras', 10.00)">Comprar Ahora</button>
+            <button class="add-to-cart">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="chart-container">
+        <canvas id="product-chart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Dirección</h4>
+          <p>Calle 123, Medellin, Colombia</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Contacto</h4>
+          <p>Teléfono: 55 1234 5678</p>
+          <p>Correo electrónico: <a href="mailto:info@example.com">info@example.com</a></p>
+        </div>
+        <div class="col-md-4">
+          <h4>Redes sociales</h4>
+          <ul>
+            <li><a href="#" target="_blank">Facebook</a></li>
+            <li><a href="#" target="_blank">Twitter</a></li>
+            <li><a href="#" target="_blank">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2023 Todos los derechos reservados</p>
+    </div>
+  </footer>
+</body>
+</html>
